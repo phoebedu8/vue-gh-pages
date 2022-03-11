@@ -27,12 +27,20 @@ const routes = [
     ]
   },
   {
+    path: '/login',
+    component: () => import('../views/LoginView.vue')
+  },
+  {
     path: '/admin',
     component: () => import('../views/DashboardView.vue'),
     children: [
       {
         path: 'products',
         component: () => import('../views/AdminProducts.vue')
+      },
+      {
+        path: 'orders',
+        component: () => import('../views/AdminOrders.vue')
       },
       {
         path: 'coupon',
